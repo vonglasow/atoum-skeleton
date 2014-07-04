@@ -1,0 +1,17 @@
+{
+    "name": "atoum/skeleton",
+    "description": "Skeleton project unit tested with atoum",
+    "license": "WTFPL",
+    "authors": [
+        {
+            "name": "alexis von Glasow",
+            "email": "vonglasow@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "atoum/atoum": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {"Skeleton\\": "source/"}
+    }
+}
