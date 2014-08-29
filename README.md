@@ -6,19 +6,19 @@ atoum.
 
 Install
 ======
-```sh
-git clone git@pikacode.com:ashgenesis/atoum-skeleton.git`
+```
+git clone git@pikacode.com:ashgenesis/atoum-skeleton.git
 make
 ```
 
 To run test
 =====
-```sh
+```
 make test
 ```
 or 
 
-```sh
+```
 ./vendor/bin/atoum -d tests
 ```
 
