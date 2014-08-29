@@ -8,6 +8,8 @@ Install
 ======
 ```
 git clone git@pikacode.com:ashgenesis/atoum-skeleton.git
+```
+```
 make
 ```
 
