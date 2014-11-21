@@ -4,6 +4,11 @@ namespace Skeleton;
 
 class Skeleton
 {
+    public function useAnotherClass(Head $head)
+    {
+        return $head->howManyEyes();
+    }
+
     public function getClass()
     {
         return (string) $this;

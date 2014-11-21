@@ -80,4 +80,16 @@ class Skeleton extends atoum\test
             ->boolean($this->testedInstance->conditional($isExpired, $countInProgress, $countToCome))->isTrue()
         ;
     }
+
+    public function testWithMock()
+    {
+        $head = new \mock\Skeleton\Head;
+
+        $this->calling($head)->howManyEyes = 3;
+
+        $this
+            ->object($this->newTestedInstance)->isInstanceOf('\Skeleton\Skeleton')
+            ->integer($this->testedInstance->useAnotherClass($head))->isEqualTo(3)
+        ;
+    }
 }
