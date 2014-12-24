@@ -9,7 +9,7 @@
         }
     ],
     "require-dev": {
-        "atoum/atoum": "dev-master"
+        "atoum/atoum": "~1.1"
     },
     "autoload": {
         "psr-0": {"Skeleton\\": "source/"}
