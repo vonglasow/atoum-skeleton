@@ -23,3 +23,7 @@ $script->noCodeCoverageForNamespaces('atoum');
 $runner->addTestsFromDirectory(__DIR__ . '/tests');
 
 $runner->setBootstrapFile(__DIR__ . '/.bootstrap.php');
+
+$report = new atoum\reports\asynchronous\xunit;
+$report->addWriter(new atoum\writers\file('/tmp/xunit.xml'));
+$runner->addReport($report);
