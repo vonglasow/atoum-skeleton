@@ -24,11 +24,13 @@ $runner->addTestsFromDirectory(__DIR__ . '/tests');
 
 $runner->setBootstrapFile(__DIR__ . '/.bootstrap.php');
 
-$report = new atoum\reports\asynchronous\xunit;
+require __DIR__ . '/source/Skeleton/xunit.php';
+$report = new skeleton\xunit;
 $report->addWriter(new atoum\writers\file('./xunit.xml'));
 $runner->addReport($report);
 
-$report = new atoum\reports\asynchronous\clover;
+require __DIR__ . '/source/Skeleton/clover.php';
+$report = new skeleton\clover;
 $report->addWriter(new atoum\writers\file('./clover.xml'));
 $runner->addReport($report);
 
