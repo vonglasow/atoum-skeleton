@@ -25,5 +25,10 @@ $runner->addTestsFromDirectory(__DIR__ . '/tests');
 $runner->setBootstrapFile(__DIR__ . '/.bootstrap.php');
 
 $report = new atoum\reports\asynchronous\xunit;
-$report->addWriter(new atoum\writers\file('/tmp/xunit.xml'));
+$report->addWriter(new atoum\writers\file('./xunit.xml'));
 $runner->addReport($report);
+
+$report = new atoum\reports\asynchronous\clover;
+$report->addWriter(new atoum\writers\file('./clover.xml'));
+$runner->addReport($report);
+
