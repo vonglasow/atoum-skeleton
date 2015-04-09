@@ -14,7 +14,7 @@ $coverageField = new atoum\report\fields\runner\coverage\html(
     CODE_COVERAGE_ROOT
 );
 
-$coverageField->setRootUrl('file://' . CODE_COVERAGE_ROOT);
+$coverageField->setRootUrl('file://' . CODE_COVERAGE_ROOT . 'index.html');
 
 $report->addField($coverageField);
 

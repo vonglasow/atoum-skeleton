@@ -17,6 +17,8 @@ class Skeleton extends atoum\test
         $this->assert('Assert if object is good instance')
             // No new needed can use $this->newTestedInstance(param1, param2, …)
             ->object($this->newTestedInstance)->isInstanceOf('\Skeleton\Skeleton')
+            ->class(get_class($this->testedInstance))
+            ->hasConstant('HELLO')
             ->assert('Assert if object return good string')
             // So as for getting object $this->testedInstance
             ->string($this->testedInstance->getClass())->isEqualTo('Skeleton\Skeleton')
