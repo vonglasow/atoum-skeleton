@@ -4,6 +4,8 @@ namespace Skeleton;
 
 class Skeleton
 {
+    private $a;
+
     public function addABrain(Brain $brain)
     {
         return $brain->howManyEyes();
@@ -33,5 +35,15 @@ class Skeleton
     {
         return !(($isExpired && 0 <= ($countInProgress + $countToCome))
                 || (0 <= ($countInProgress + $countToCome) - 1));
+    }
+
+    public function setA($a)
+    {
+        $this->a = $a / 100;
+    }
+
+    public function getA()
+    {
+        return $this->a * 100;
     }
 }
