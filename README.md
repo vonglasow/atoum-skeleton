@@ -7,7 +7,7 @@ atoum.
 Install
 ======
 ```
-git clone git@pikacode.com:ashgenesis/atoum-skeleton.git
+git clone git@github.com:vonglasow/atoum-skeleton.git
 ```
 ```
 make
