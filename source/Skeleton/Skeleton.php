@@ -13,25 +13,4 @@ class Skeleton
     {
         return $head->howManyEyes();
     }
-
-    public function getClass()
-    {
-        return (string) $this;
-    }
-
-    public function __toString()
-    {
-        return __CLASS__;
-    }
-
-    public function countArray()
-    {
-        return count(array(1, 2, 3, 4));
-    }
-
-    public function conditional($isExpired, $countInProgress, $countToCome)
-    {
-        return !(($isExpired && 0 <= ($countInProgress + $countToCome))
-                || (0 <= ($countInProgress + $countToCome) - 1));
-    }
 }

@@ -8,4 +8,9 @@ class Head
     {
         return rand(1, 10);
     }
+
+    public function fluent() : self
+    {
+        return $this;
+    }
 }
