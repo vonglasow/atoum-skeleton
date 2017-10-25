@@ -92,4 +92,16 @@ class Skeleton extends atoum\test
             ->integer($this->testedInstance->useAnotherClass($head))->isEqualTo(3)
         ;
     }
+
+    public function testWithMockParentMethod()
+    {
+        $brain = new \mock\Skeleton\Brain;
+
+        $this->calling($brain)->howManyEyes = 20;
+
+        $this
+            ->object($this->newTestedInstance)->isInstanceOf('\Skeleton\Skeleton')
+            ->integer($this->testedInstance->addABrain($brain))->isEqualTo(20)
+        ;
+    }
 }
