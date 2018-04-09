@@ -1,32 +1,38 @@
 language: php
 
 matrix:
-    include:
-        - php: 5.5
-        - php: 5.6
-        - php: 7.0
-        - php: 7.1
-        - php: 7.2
-        - php: nightly
-    allow_failures:
-        - php: nightly
-    fast_finish: true
+  include:
+    - php: 5.5
+    - php: 5.6
+    - php: 7.0
+    - php: 7.1
+    - php: 7.2
+    - php: nightly
+  allow_failures:
+    - php: nightly
+  fast_finish: true
 
 os:
-    - linux
+  - linux
+
+branches:
+  only:
+    - staging
+    - trying
+    - master
 
 sudo: false
 
 cache:
-    directories:
-        - vendor/
+  directories:
+    - vendor/
 
 before_script:
-    - export PATH="$PATH:$HOME/.composer/vendor/bin"
-    - if [[ ! $ENABLE_XDEBUG ]]; then
-        phpenv config-rm xdebug.ini || echo "ext-xdebug is not available, cannot remove it.";
+  - export PATH="$PATH:$HOME/.composer/vendor/bin"
+  - if [[ ! $ENABLE_XDEBUG ]]; then
+      phpenv config-rm xdebug.ini || echo "ext-xdebug is not available, cannot remove it.";
     fi
 
 script:
-    - composer install
-    - vendor/bin/atoum
+  - composer install
+  - vendor/bin/atoum
