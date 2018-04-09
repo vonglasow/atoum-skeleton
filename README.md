@@ -1,6 +1,8 @@
 Atoum Skeleton
 =======
 
+[![Build Status](https://travis-ci.org/vonglasow/atoum-skeleton.svg?branch=master)](https://travis-ci.org/vonglasow/atoum-skeleton)
+
 Just a little project which implement a skeleton for application tested with
 atoum.
 
