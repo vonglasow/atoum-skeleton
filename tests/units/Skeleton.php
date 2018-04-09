@@ -92,4 +92,17 @@ class Skeleton extends atoum\test
             ->integer($this->testedInstance->useAnotherClass($head))->isEqualTo(3)
         ;
     }
+
+    public function testImplodeArray()
+    {
+        $this
+            ->object($this->newTestedInstance)->isInstanceOf('\Skeleton\Skeleton')
+            ->exception(function() {
+                $this->testedInstance->implodeArray(true);
+            })
+            ->isInstanceOf('\Exception')
+            ->hasMessage('Must be an array')
+        ;
+    }
+    
 }
