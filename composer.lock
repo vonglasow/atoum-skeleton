@@ -4,38 +4,40 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8fa24c83484b97303b91ebcb78a354b7",
-    "content-hash": "f4f3d6ce0efed4fe734ef4c6aacae9e4",
+    "content-hash": "78eee2c6dd3964adeda640d3d37ac781",
     "packages": [],
     "packages-dev": [
         {
             "name": "atoum/atoum",
-            "version": "2.8.1",
+            "version": "3.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/atoum/atoum.git",
-                "reference": "1813c5f50d4727cc4be8ec9abe25befae78ce4c5"
+                "reference": "c5279d0ecd4e2d53af6b38815db2cafee8fc46b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/atoum/atoum/zipball/1813c5f50d4727cc4be8ec9abe25befae78ce4c5",
-                "reference": "1813c5f50d4727cc4be8ec9abe25befae78ce4c5",
+                "url": "https://api.github.com/repos/atoum/atoum/zipball/c5279d0ecd4e2d53af6b38815db2cafee8fc46b6",
+                "reference": "c5279d0ecd4e2d53af6b38815db2cafee8fc46b6",
                 "shasum": ""
             },
             "require": {
                 "ext-hash": "*",
                 "ext-json": "*",
-                "ext-session": "*",
                 "ext-tokenizer": "*",
                 "ext-xml": "*",
-                "php": ">=5.3.3"
+                "php": "^5.6.0 || ^7.0.0 <7.4.0"
             },
             "replace": {
                 "mageekguy/atoum": "*"
             },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2"
+            },
             "suggest": {
                 "atoum/stubs": "Provides IDE support (like autocompletion) for atoum",
-                "ext-mbstring": "Provides support for UTF-8 strings"
+                "ext-mbstring": "Provides support for UTF-8 strings",
+                "ext-xdebug": "Provides code coverage report (>= 2.3)"
             },
             "bin": [
                 "bin/atoum"
@@ -43,7 +45,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.x-dev"
+                    "dev-master": "3.x-dev"
                 }
             },
             "autoload": {
@@ -86,7 +88,7 @@
                 "test",
                 "unit testing"
             ],
-            "time": "2016-07-01 15:49:14"
+            "time": "2018-03-15T22:46:39+00:00"
         }
     ],
     "aliases": [],
