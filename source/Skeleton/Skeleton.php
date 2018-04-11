@@ -34,4 +34,13 @@ class Skeleton
         return !(($isExpired && 0 <= ($countInProgress + $countToCome))
                 || (0 <= ($countInProgress + $countToCome) - 1));
     }
+
+    public function implodeArray($array)
+    {
+        if (!is_array($array)) {
+            throw new \Exception('Must be an array', 001);
+        }
+
+        return implode(',', $array);
+    }
 }

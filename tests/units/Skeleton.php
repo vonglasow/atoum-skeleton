@@ -104,4 +104,18 @@ class Skeleton extends atoum\test
             ->integer($this->testedInstance->addABrain($brain))->isEqualTo(20)
         ;
     }
+
+    public function testImplodeArrayRaiseAnException()
+    {
+        $this
+            ->object($this->newTestedInstance)->isInstanceOf('\Skeleton\Skeleton')
+            ->exception(function() {
+                $this->testedInstance->implodeArray(true);
+            })
+            ->isInstanceOf('\Exception')
+                ->hasMessage('Must be an array')
+                ->hasCode(001)
+        ;
+    }
+
 }
